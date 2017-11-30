@@ -1,0 +1,11 @@
+$mainBlue: #2f5572;
+
+body {
+  color: $mainBlue;
+  width:100%;
+}
+
+img {
+  height: auto;
+  max-width:100%;
+}
