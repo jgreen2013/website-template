@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "base/_variables.css";
+@import "base/_mixins";
 @import "base/_global.css";
 @import "modules/_navbar";
-@import "modules/_index";
+@import "modules/_row2";
