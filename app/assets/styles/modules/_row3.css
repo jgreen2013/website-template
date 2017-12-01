@@ -1,0 +1,35 @@
+.row3 {
+
+
+  &__firstline {
+    font-size:.9rem;
+
+    @mixin atSmall {
+      font-size:.9rem;
+    }
+    @mixin atMedium {
+      font-size:.9rem;
+    }
+    @mixin atLarge {
+      font-size:1.0rem;
+    }
+  }
+
+  &__secondline {
+    font-size:.9rem;
+    
+    @mixin atSmall {
+      font-size:.9rem;
+    }
+    @mixin atMedium {
+      font-size:.9rem;
+    }
+    @mixin atLarge {
+      font-size:1.0rem;
+    }
+  }
+
+  &__secondline--red {
+    color:red;
+  }
+}

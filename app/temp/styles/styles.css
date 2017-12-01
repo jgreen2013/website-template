@@ -460,6 +460,20 @@ img {
   max-width:100%;
 }
 
+/* CSS for the entire page is added here */
+
+.wrapper {
+
+}
+
+/* CSS that is for each section of a page is added here */
+
+/* Mostly used when a page has repeatable sections throughout the page */
+
+.section {
+
+}
+
 .navbar {
   width:100%;
 }
@@ -517,4 +531,58 @@ img {
 .row2__secondline {
       font-size:1.8rem
   }
+  }
+
+.row3__firstline {
+    font-size:.9rem;
+  }
+
+@media (min-width: 530px) {
+
+.row3__firstline {
+      font-size:.9rem
+  }
+  }
+
+@media (min-width: 800px) {
+
+.row3__firstline {
+      font-size:.9rem
+  }
+  }
+
+@media (min-width: 1200px) {
+
+.row3__firstline {
+      font-size:1.0rem
+  }
+  }
+
+.row3__secondline {
+    font-size:.9rem;
+  }
+
+@media (min-width: 530px) {
+
+.row3__secondline {
+      font-size:.9rem
+  }
+  }
+
+@media (min-width: 800px) {
+
+.row3__secondline {
+      font-size:.9rem
+  }
+  }
+
+@media (min-width: 1200px) {
+
+.row3__secondline {
+      font-size:1.0rem
+  }
+  }
+
+.row3__secondline--red {
+    color:red;
   }
