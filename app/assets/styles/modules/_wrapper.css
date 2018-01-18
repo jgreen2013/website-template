@@ -1,4 +1,6 @@
 /* CSS for the entire page is added here */
 .wrapper {
-
+  overflow:hidden;
+  margin-left:auto;
+  margin-right: auto;
 }

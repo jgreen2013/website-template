@@ -460,10 +460,17 @@ img {
   max-width:100%;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 /* CSS for the entire page is added here */
 
 .wrapper {
-
+  overflow:hidden;
+  margin-left:auto;
+  margin-right: auto;
 }
 
 /* CSS that is for each section of a page is added here */
@@ -585,4 +592,20 @@ img {
 
 .row3__secondline--red {
     color:red;
+  }
+
+.generic-content-container p {
+      line-height: 1.65;
+      margin:1.8rem 0;
+  }
+
+@media (min-width: 530px) {
+
+.generic-content-container p {
+        font-size: 1.125rem
+  }
+  }
+
+.generic-content-container p a {
+    font-weight:700;
   }
