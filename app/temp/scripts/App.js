@@ -113,8 +113,12 @@ var Menu = function () {
   function Menu() {
     _classCallCheck(this, Menu);
 
+    /* Virtualize the DOM elements */
+    this.MenuButton1Label = (0, _jquery2.default)("#MenuButton1Label");
     this.MenuButton1 = (0, _jquery2.default)("#MenuButton1");
+    this.MenuButton2Label = (0, _jquery2.default)("#MenuButton2Label");
     this.MenuButton2 = (0, _jquery2.default)("#MenuButton2");
+    this.MenuButton3Label = (0, _jquery2.default)("#MenuButton3Label");
     this.MenuButton3 = (0, _jquery2.default)("#MenuButton3");
 
     this.events();
@@ -123,18 +127,30 @@ var Menu = function () {
   _createClass(Menu, [{
     key: "events",
     value: function events() {
-      this.MenuButton1.click(this.toggleTheButton.bind(this));
-      this.MenuButton2.click(this.toggleTheButton.bind(this));
-      this.MenuButton3.click(this.toggleTheButton.bind(this));
+      this.MenuButton1.click(this.toggleButton1.bind(this));
+      this.MenuButton2.click(this.toggleButton2.bind(this));
+      this.MenuButton3.click(this.toggleButton3.bind(this));
     }
   }, {
-    key: "toggleTheButton",
-    value: function toggleTheButton() {
-      if (this.MenuButton1.hasClass("active")) {
-        this.MenuButton1.toggleClass("btn-outline-secondary");
-      } else {
-        this.MenuButton1.toggleClass("active btn-outline-success");
-      }
+    key: "toggleButton1",
+    value: function toggleButton1() {
+      this.MenuButton1Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
+      this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+      this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+    }
+  }, {
+    key: "toggleButton2",
+    value: function toggleButton2() {
+      this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+      this.MenuButton2Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
+      this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+    }
+  }, {
+    key: "toggleButton3",
+    value: function toggleButton3() {
+      this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+      this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+      this.MenuButton3Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
     }
   }]);
 
