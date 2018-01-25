@@ -10,6 +10,8 @@ window.onload = function() {
 };
 */
 
+import MobileMenu from './modules/Menu';
 import Menu from './modules/Menu';
 
+var mobileMenu = new MobileMenu();
 var menu = new Menu();

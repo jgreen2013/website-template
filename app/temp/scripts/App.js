@@ -76,9 +76,9 @@ var _Menu2 = _interopRequireDefault(_Menu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var menu = new _Menu2.default(); /* This is the old node way of importing
-                                 var Person = require('./modules/Person');
-                                 */
+/* This is the old node way of importing
+var Person = require('./modules/Person');
+*/
 
 /*
 import Person from './modules/Person';
@@ -87,6 +87,9 @@ window.onload = function() {
   jason.greet();
 };
 */
+
+var mobileMenu = new _Menu2.default();
+var menu = new _Menu2.default();
 
 /***/ }),
 /* 1 */
@@ -114,6 +117,7 @@ var Menu = function () {
     _classCallCheck(this, Menu);
 
     /* Virtualize the DOM elements */
+    this.currentSelection = "Button1";
     this.MenuButton1Label = (0, _jquery2.default)("#MenuButton1Label");
     this.MenuButton1 = (0, _jquery2.default)("#MenuButton1");
     this.MenuButton2Label = (0, _jquery2.default)("#MenuButton2Label");
@@ -137,6 +141,7 @@ var Menu = function () {
       this.MenuButton1Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
       this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+      this.exit();
     }
   }, {
     key: "toggleButton2",
@@ -144,6 +149,7 @@ var Menu = function () {
       this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton2Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
       this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
+      this.exit();
     }
   }, {
     key: "toggleButton3",
@@ -151,7 +157,11 @@ var Menu = function () {
       this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton3Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
+      this.exit();
     }
+  }, {
+    key: "exit",
+    value: function exit() {}
   }]);
 
   return Menu;
