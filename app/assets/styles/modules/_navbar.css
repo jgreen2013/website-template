@@ -1,3 +1,9 @@
 .navbar {
+  position:fixed;
   width:100%;
+
+  &--opaque {
+    background-color: rgba(52,58,64,.7);
+  }
+
 }

@@ -1,6 +1,7 @@
 .row2 {
   background-color: whitesmoke;
   text-align:center;
+  margin-top:62px;
 
   &__firstline {
     font-size:1.1rem;

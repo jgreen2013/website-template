@@ -482,12 +482,19 @@ img {
 }
 
 .navbar {
+  position:fixed;
   width:100%;
+
 }
+
+.navbar--opaque {
+    background-color: rgba(52,58,64,.7);
+  }
 
 .row2 {
   background-color: whitesmoke;
   text-align:center;
+  margin-top:62px;
 }
 
 .row2__firstline {
