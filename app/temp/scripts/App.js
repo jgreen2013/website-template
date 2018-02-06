@@ -10410,7 +10410,7 @@ var Menu = function () {
       this.MenuButton1Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
       this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
-      this.exit();
+      window.location.href = "#section1";
     }
   }, {
     key: "toggleButton2",
@@ -10418,7 +10418,7 @@ var Menu = function () {
       this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton2Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
       this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
-      this.exit();
+      window.location.href = "#section2";
     }
   }, {
     key: "toggleButton3",
@@ -10426,11 +10426,8 @@ var Menu = function () {
       this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton3Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
-      this.exit();
+      window.location.href = "#section3";
     }
-  }, {
-    key: "exit",
-    value: function exit() {}
   }]);
 
   return Menu;
@@ -10470,6 +10467,9 @@ var StickyHeader = function () {
     this.siteHeader = (0, _jquery2.default)(".navbar");
     this.headerTriggerElement = (0, _jquery2.default)(".row2");
     this.createHeaderWaypoint();
+    this.pageSections = (0, _jquery2.default)(".section");
+    this.headerLinks = (0, _jquery2.default)(".navbar label");
+    this.createPageSectionWaypoints();
   }
 
   _createClass(StickyHeader, [{
@@ -10485,6 +10485,23 @@ var StickyHeader = function () {
             that.siteHeader.addClass('navbar-dark bg-dark').removeClass('navbar-light navbar--opaque');
           }
         }
+      });
+    }
+  }, {
+    key: 'createPageSectionWaypoints',
+    value: function createPageSectionWaypoints() {
+      var that = this;
+      this.pageSections.each(function () {
+        var currentPageSection = this;
+        new Waypoint({
+          element: currentPageSection,
+          handler: function handler() {
+            var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+            that.headerLinks.removeClass("is-current-link");
+            (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
+          },
+          offset: '75%'
+        });
       });
     }
   }]);

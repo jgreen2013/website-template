@@ -1,9 +1,17 @@
 .navbar {
   position:fixed;
   width:100%;
+  top:0;
 
   &--opaque {
     background-color: rgba(52,58,64,.7);
+  }
+}
+
+.btn {
+
+  &.is-current-link {
+    background-color:red;
   }
 
 }

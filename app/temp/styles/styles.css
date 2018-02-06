@@ -479,22 +479,26 @@ img {
 
 .section {
 
+
 }
 
 .navbar {
   position:fixed;
   width:100%;
-
+  top:0;
 }
 
 .navbar--opaque {
     background-color: rgba(52,58,64,.7);
   }
 
+.btn.is-current-link {
+    background-color:red;
+  }
+
 .row2 {
   background-color: whitesmoke;
   text-align:center;
-  margin-top:62px;
 }
 
 .row2__firstline {

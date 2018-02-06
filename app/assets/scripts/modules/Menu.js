@@ -25,24 +25,21 @@ class Menu {
     this.MenuButton1Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
     this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
     this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
-    this.exit();
+    window.location.href = "#section1";
   }
 
   toggleButton2() {
     this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
     this.MenuButton2Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
     this.MenuButton3Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
-    this.exit();
+    window.location.href = "#section2";
   }
 
   toggleButton3() {
       this.MenuButton1Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton2Label.removeClass("active btn-outline-success").addClass("btn-outline-secondary");
       this.MenuButton3Label.removeClass("btn-outline-secondary").addClass("active btn-outline-success");
-      this.exit();
-  }
-
-  exit() {
+      window.location.href = "#section3";
 
   }
 
