@@ -17,7 +17,7 @@
 
   &__secondline {
     font-size:.9rem;
-    
+
     @mixin atSmall {
       font-size:.9rem;
     }
@@ -27,9 +27,9 @@
     @mixin atLarge {
       font-size:1.0rem;
     }
-  }
 
-  &__secondline--red {
-    color:red;
+    &--isred {
+      color: red;
+    }
   }
 }
