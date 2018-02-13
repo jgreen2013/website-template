@@ -1,5 +1,7 @@
 .body_content {
   margin-top:62px;
-  position:fixed;
+  overflow:auto;
+  position:static;
+  height:100%;
   width:100%;
 }
