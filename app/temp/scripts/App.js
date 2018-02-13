@@ -10478,7 +10478,7 @@ var StickyHeader = function () {
       temp.push(this.childNodes[1].id);
     });
     this.headerLinks = temp;
-    console.log(temp);
+    //console.log(temp);
     //this.addSmoothScrolling();
   }
 

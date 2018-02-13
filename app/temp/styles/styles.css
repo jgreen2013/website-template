@@ -465,6 +465,12 @@ img {
           box-sizing: border-box;
 }
 
+.body_content {
+  margin-top:62px;
+  position:fixed;
+  width:100%;
+}
+
 /* CSS for the entire page is added here */
 
 .wrapper {
@@ -484,8 +490,8 @@ img {
 
 .navbar {
   position:fixed;
-  width:100%;
   top:0;
+  width:100%;
 
 }
 
